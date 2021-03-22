@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        * {
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            padding-bottom: 15px;
+        }
+        section {
+            margin: 0 auto;
+            min-height: 200px;
+            text-align: center;
+        }
+        ul{
+            text-align: start;
+        }
+        li{
+            padding-bottom: 10px;
+        }
+        a{
+            text-decoration: none !important;
+        }
+        a:hover {
+            cursor: pointer;
+        }
+        a:before{
+            content: "\003E";
+            color: white;
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            section{
+                width: 500px;
+            }
+        }
+        @media only screen and (min-width: 992px) {
+            section{
+                width: 600px;
+            }
+        }
+        @media only screen and (min-width: 1200px) {
+            section{
+                width: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 style="text-align: center; padding: 5px">Api for Tfood school project</h1>
+</header>
+<main>
+    <section>
+        <h2>About this project</h2>
+        <p>
+            This project was assigned to me and my colleague at school for subject RAO.
+            This is a simple web application that will provide local businesses platform to sell it
+            products either B2B or B2C. This projects aims to encourage customers to buy local products first
+            rather than buying the same products from supermarkets and connectivity between local businesses.
+        </p>
+    </section>
+
+    <section>
+        <h2>Api routes</h2>
+        <ul>
+            <li>api/company - access/modify company data</li>
+            <li>User - generate token, authorization and authentication </li>
+            <li>Order - access/modify orders depending on user role</li>
+            <li>Offers - modify orders if user has role of a company and view/order it if user is customer </li>
+        </ul>
+    </section>
+
+    <section>
+        <a
+                style="color: white"
+                href="https://github.com/Ribic2/tfood"
+        >Learn more</a>
+    </section>
+
+</main>
+</body>
+</html>
