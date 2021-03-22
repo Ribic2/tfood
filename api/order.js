@@ -2,15 +2,27 @@ const express = require('express')
 const router = express.Router();
 const jwt = require('../middleware/jwt')
 
-router.get('/', (req, res) => {
+router.get('/', jwt.authenticateToken ,(req, res) => {
     res.json({
-        "Order": jwt.generateToken(),
+        "Order": "test",
     })
 })
 
-router.get('/about',jwt.authenticateToken,(req, res) => {
+router.post('/',jwt.authenticateToken,(req, res) => {
    res.json({
-       "response" : req.user
+       "response" : "test"
    })
+})
+
+router.delete('/',jwt.authenticateToken,(req, res) => {
+    res.json({
+        "response" : "test"
+    })
+})
+
+router.put('/',jwt.authenticateToken,(req, res) => {
+    res.json({
+        "response" : "test"
+    })
 })
 module.exports = router

@@ -15,16 +15,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       createdAt: {
-        allowNull: false,
+        defaultValue: Sequelize.fn('NOW'),
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('users');
   }
 };
