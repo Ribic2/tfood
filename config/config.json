@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Brezno123456",
+    "password": "",
     "database": "tfood",
     "host": "localhost",
     "dialect": "mysql"
