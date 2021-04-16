@@ -2,19 +2,26 @@
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
-  class profile extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  };
+  class profile extends Model {};
   profile.init({
-    attributes: DataTypes.ENUM
+    id:{
+      primaryKey: true,
+      type: DataTypes.INTEGER
+    },
+    attributes:{
+      type: DataTypes.ENUM('buyer', 'company'),
+    },
+    userId:{
+      type: DataTypes.INTEGER
+    },
+    createdAt:{
+      type: DataTypes.DATE
+    },
+    updatedAt:{
+      type: DataTypes.DATE
+    }
   }, {
     sequelize,
     modelName: 'profile',
